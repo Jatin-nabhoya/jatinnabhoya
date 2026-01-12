@@ -90,6 +90,30 @@ ProjectCard.propTypes = {
 const Projects = () => {
   const projects = [
     {
+      title: "RidePulse | AWS-Based Data Engineering Pipeline (Medallion Architecture)",
+      duration: "sep-2025",
+      tech: [
+        "AWS S3",
+        "AWS EC2",
+        "Mage.ai",
+        "AWS Glue (Crawler & Jobs)",
+        "AWS Athena (CTAS)",
+        "Amazon QuickSight",
+        "Power BI",
+        "Parquet",
+        "Medallion Architecture"
+      ],
+      description: [
+        "RidePulse is an AWS-native data engineering project that implements a three-layer medallion architecture (Raw, Silver, Gold) to transform real-world NYC TLC open-source CSV data into analytics-ready, high-quality datasets. The pipeline is designed to handle unstructured and semi-structured raw data, enforce schema consistency, and optimize data storage for analytical workloads.",
+        "The ingestion layer stores raw NYC TLC CSV files in Amazon S3 (Raw layer). ETL orchestration is handled using Mage.ai deployed on AWS EC2, enabling modular, version-controlled pipelines. Schema discovery and validation are performed using AWS Glue Crawlers, followed by AWS Glue Jobs to transform data from CSV to columnar Parquet format, writing cleaned and standardized datasets to the Silver layer in S3.",
+        "In the Gold layer, curated and aggregated datasets are modeled for analytics using Athena external tables and CTAS queries, enabling efficient querying and downstream consumption. The optimized datasets are visualized using Amazon QuickSight and Power BI, supporting exploratory data analysis and dashboard-driven insights. The project emphasizes data quality checks, schema evolution handling, storage optimization, and scalable ETL design, closely simulating production-grade data engineering systems."
+      ],
+      image: "/images/ridepulse.jpeg",
+      sourceCode: "#",
+      liveDemo: "#"
+    },
+
+    {
       title: "Healthcare Data Pipeline on Azure",
       duration: "Apr-2025",
       tech: [
