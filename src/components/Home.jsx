@@ -48,7 +48,7 @@ const Home = () => {
             {/* Image Container */}
             <div className="relative">
               <img
-                src="/images/professional-photo.png"
+                src="/images/myphoto.png"
                 alt="Jatin Nabhoya"
                 className="w-full"
               />
