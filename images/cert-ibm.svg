@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#282C33"/>
+  <rect x="50" y="50" width="700" height="300" fill="none" stroke="#C778DD" stroke-width="2"/>
+  
+  <!-- IBM-style Design -->
+  <rect x="300" y="120" width="40" height="40" fill="#C778DD"/>
+  <rect x="350" y="120" width="40" height="40" fill="#C778DD"/>
+  <rect x="400" y="120" width="40" height="40" fill="#C778DD"/>
+  <rect x="350" y="170" width="40" height="40" fill="#C778DD"/>
+  <rect x="400" y="170" width="40" height="40" fill="#C778DD"/>
+  <rect x="450" y="170" width="40" height="40" fill="#C778DD"/>
+  
+  <!-- Text -->
+  <text x="400" y="250" font-family="Arial" font-size="24" fill="#ABB2BF" text-anchor="middle">Data Science</text>
+  <text x="400" y="280" font-family="Arial" font-size="20" fill="#ABB2BF" text-anchor="middle">Professional Certificate</text>
+  <text x="400" y="310" font-family="Arial" font-size="16" fill="#C778DD" text-anchor="middle">IBM</text>
+</svg> 
