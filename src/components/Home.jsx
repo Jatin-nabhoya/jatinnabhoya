@@ -18,16 +18,16 @@ const Home = () => {
             </p>
 
             <div className="flex flex-wrap gap-4 mt-6">
-              <a 
-                href="#contact" 
+              <a
+                href="#contact"
                 className="border border-[#C778DD] px-4 py-2 hover:bg-[#C778DD] hover:text-white transition-colors"
               >
                 Contact me!!
               </a>
-              <a 
-                href="https://github.com/Jatin-Nabhoya" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://github.com/Jatin-Nabhoya"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border border-[#ABB2BF] px-4 py-2 hover:border-[#C778DD] hover:text-white transition-colors"
               >
                 My Github <span className="ml-2">{'->'}</span>
@@ -48,7 +48,7 @@ const Home = () => {
             {/* Image Container */}
             <div className="relative">
               <img
-                src="/images/myphoto.png"
+                src="/images/myphoto.jpeg"
                 alt="Jatin Nabhoya"
                 className="w-full"
               />
