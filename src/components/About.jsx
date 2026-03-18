@@ -118,19 +118,23 @@ const About = () => {
           <div className="text-[#ABB2BF] space-y-4">
             <p className="relative pl-6">
               <span className="absolute left-0 top-2 w-2 h-2 bg-[#C778DD] rounded-full"></span>
-              I’m Jatin Nabhoya — a Data Science professional and Machine Learning enthusiast driven by a passion for turning raw data into real‑world impact.
+              I&apos;m Jatin Nabhoya — a <span className="text-[#C778DD] font-semibold">Data Science graduate student</span> and <span className="text-[#C778DD] font-semibold">Machine Learning engineer</span> who believes data only becomes powerful when it drives real decisions.
             </p>
             <p className="relative pl-6">
               <span className="absolute left-0 top-2 w-2 h-2 bg-[#C778DD] rounded-full"></span>
-              My journey began in India, where I earned a B.Tech in Computer Engineering from RK University and sharpened my Python chops through NPTEL’s “Python for Data Science.” Alongside, <strong className="text-[#C778DD]">I led my team to become a Smart India Hackathon finalist</strong>, wrangling messy datasets into predictive models that solved concrete problems. Today, as an M.S. student in Data Science at the University of New Haven, I delve deeper into feature engineering, time‑series forecasting, and scalable model deployment.
+              My journey started in India, where I earned a B.Tech in Computer Engineering from RK University and led my team to become a <strong className="text-[#C778DD]">Smart India Hackathon 2022 Finalist</strong> — building an ML-powered document verification system that improved <span className="text-[#C778DD] font-semibold">fraud detection accuracy by 30%</span>. That experience cemented my belief that the best models are the ones that solve concrete, human problems.
             </p>
             <p className="relative pl-6">
               <span className="absolute left-0 top-2 w-2 h-2 bg-[#C778DD] rounded-full"></span>
-              I’ve architected end‑to‑end solutions— from an electric‐vehicle population dashboard that forecasts regional EV adoption trends, to a full‑stack e‑commerce portal built with Django REST and ReactJS. I’m equally comfortable crafting SQL/NoSQL pipelines and designing interactive visualizations as I am fine‑tuning classifiers with scikit‑learn or experimenting with neural nets in TensorFlow. My work always centers on one belief: <strong className="text-[#C778DD]">Data only becomes powerful when it drives actionable insights.</strong>
+              Today, I&apos;m an MS Data Science student at the University of New Haven, going deeper into the areas I find most exciting — <span className="text-[#C778DD] font-semibold">Natural Language Processing</span> (language models, sequence modeling, text classification) and <span className="text-[#C778DD] font-semibold">Deep Learning</span> (CNNs, RNNs, image classification, transfer learning) — while actively building projects that put these concepts into practice.
             </p>
             <p className="relative pl-6">
               <span className="absolute left-0 top-2 w-2 h-2 bg-[#C778DD] rounded-full"></span>
-              Whether I’m optimizing a recommendation engine, automating ETL processes in the cloud, or mentoring peers on best practices, I blend statistical rigor, software engineering, and a user‑first mindset. Let’s collaborate to build intelligent, data‑driven applications that not only learn—but lead—businesses and communities forward.
+              Beyond the classroom, I&apos;ve architected end-to-end solutions: a <span className="text-[#C778DD] font-semibold">cloud-scale ride analytics pipeline on AWS</span> using Apache Airflow, Redshift, and Power BI; a <span className="text-[#C778DD] font-semibold">diabetes risk prediction system</span> comparing multiple classifiers with full feature engineering; and a full-stack e-commerce portal built with Django REST and React.js. I&apos;m equally comfortable designing ETL pipelines, fine-tuning classifiers with Scikit-Learn, or experimenting with neural networks in <span className="text-[#C778DD] font-semibold">PyTorch and TensorFlow</span>.
+            </p>
+            <p className="relative pl-6">
+              <span className="absolute left-0 top-2 w-2 h-2 bg-[#C778DD] rounded-full"></span>
+              I bring a blend of <span className="text-[#C778DD] font-semibold">statistical rigor, software engineering, and a user-first mindset</span> to every project. Whether I&apos;m optimizing a model, automating a cloud workflow, or exploring a new architecture, my goal stays the same: <strong className="text-[#C778DD]">build intelligent, scalable systems that don&apos;t just learn — they lead.</strong>
             </p>
           </div>
         </div>
