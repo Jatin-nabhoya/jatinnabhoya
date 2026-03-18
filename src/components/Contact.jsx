@@ -38,7 +38,7 @@ const Contact = () => {
               <h3 className="text-xl font-bold mb-4">Jatin Nabhoya</h3>
               <p className="text-[#ABB2BF]">+1 (203)-507-5295</p>
               <p className="text-[#ABB2BF]">jvnabhoya.work@gmail.com</p>
-              <p className="text-[#ABB2BF] mb-6">New haven, CT, US</p>
+              <p className="text-[#ABB2BF] mb-6">New York City Metropolitan Area, USA</p>
 
               <h3 className="text-xl font-bold mb-4">Social Links</h3>
               <div className="space-y-4">
