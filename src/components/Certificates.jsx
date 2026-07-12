@@ -91,7 +91,7 @@ const Certificates = () => {
       title: "CCNA: Introduction to Networks",
       issuer: "Cisco",
       issueDate: "Dec-2022",
-      image: "/images/cisco.png",
+      image: "/images/CISCO.png",
       verifyLink: "https://www.credly.com/badges/5170d80d-d050-40fb-8b6c-a840b5749bd0/linked_in_profile"
     },
     {
@@ -104,7 +104,7 @@ const Certificates = () => {
         "Data Visualization",
         "Data Science"
       ],
-      image: "/images/nptel.jpeg",
+      image: "/images/NPTEL.jpeg",
       verifyLink: "https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL22CS32S34140074NPTEL2201045454"
     },
     
@@ -112,14 +112,14 @@ const Certificates = () => {
       title: "SIH 2022 Finalist",
       issuer: "Smart India Hackathon (Govt)",
       issueDate: "2022",
-      image: "/images/sih.jpeg",
+      image: "/images/SIH.jpeg",
       verifyLink: "https://www.linkedin.com/posts/jatin-nabhoya_sih2022-smartindiahackathon2022-pmabrmodiatsih-activity-6978567500753985537-ihYR?utm_source=share&utm_medium=member_desktop&rcm=ACoAADHp1jcBePk9Vfhbnw1HGRVWgLJGwHrbRHg"
     },
     {
       title: "SQL (Intermediate) level",
       issuer: "HackerRank",
       issueDate: "Jun-2022",
-      image: "/images/hr.png",
+      image: "/images/HR.png",
       verifyLink: "https://www.hackerrank.com/certificates/1bc6ebb718f4"
     },
     {

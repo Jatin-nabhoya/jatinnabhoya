@@ -142,7 +142,7 @@ const Projects = () => {
         "Ran a 30-trial Optuna hyperparameter search over learning rate, weight decay, batch size, and augmentation strength, plus test-time augmentation at evaluation — wrote a custom PyTorch training loop instead of the stock YOLOv7 trainer for full control over the freeze/unfreeze schedule.",
         "Detection performance: COCO baseline 0.0005 → frozen-head fine-tuning ~0.20 → full fine-tuning ~0.45 mAP@0.5. Documented with training curves and a confusion matrix in a full project report (docs/report.pdf in repo)."
       ],
-      image: "/images/placeholder.svg",
+      image: "/images/yolov7-gym-cover.svg",
       sourceCode: "https://github.com/Jatin-nabhoya/YOLOv7_Gym_Equipment_Detection",
       liveDemo: "https://github.com/Jatin-nabhoya/YOLOv7_Gym_Equipment_Detection/blob/main/docs/report.pdf"
     },
@@ -168,6 +168,7 @@ const Projects = () => {
       image: "/images/ridepulse.jpeg",
       sourceCode: "#",
       liveDemo: "#"
+
     },
 
     {
@@ -188,6 +189,7 @@ const Projects = () => {
       image: "/images/healthcare-pipeline.png",
       sourceCode: "#",
       liveDemo: "#"
+
     },
     {
       title: "Netflix Content Breakdown: Genres, Volumes, & Annual Releases",
