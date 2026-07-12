@@ -34,10 +34,10 @@ ExperienceCard.propTypes = {
 const Experience = () => {
   const experiences = [
     {
-      title: "Software developer intern",
+      title: "Machine Learning Engineer",
       company: "Weneura FutureTech Pvt Ltd",
       location: "Delhi, India",
-      duration: "Dec 2023 - Aug 2024",
+      duration: "Dec 2023 – Jan 2025",
       achievements: [
         "Developed and fine-tuned machine learning models, improving prediction accuracy by 15%.",
         "Automated data preprocessing pipelines using Python and SQL, reduced processing time by 30%.",

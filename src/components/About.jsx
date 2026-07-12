@@ -59,49 +59,75 @@ const About = () => {
       "Linear Algebra",
       "Probability",
       "Statistics",
-      "Optimization Techniques",
+      "Optimization",
       "Calculus"
     ],
-    "🧑‍💻 Programming Languages & Databases": [
-      "Languages: Python",
+    "🧑‍💻 Programming & Databases": [
+      "Python",
       "SQL",
-      "Relational DBs: PostgreSQL",
+      "PostgreSQL",
       "MySQL",
-      "NoSQL DBs: MongoDB"
+      "MongoDB"
     ],
-    "🤖 Machine Learning & AI": [
+    "🤖 Machine Learning & Deep Learning": [
       "Pandas",
       "NumPy",
       "SciPy",
       "Scikit-learn",
-      "PySpark (basics)",
-      "Model Deployment",
+      "PyTorch",
+      "TensorFlow",
+      "PySpark",
+      "torchmetrics",
       "MLOps Basics"
     ],
-    "📊 Data Visualization & Analytics": [
+    "🗣️ NLP & LLM Engineering": [
+      "LangChain",
+      "Hugging Face Transformers",
+      "RAG (Retrieval-Augmented Generation)",
+      "FAISS",
+      "Sentence-Transformers",
+      "PubMedBERT",
+      "BitsAndBytes (quantization)",
+      "LLMs (Llama-3, Mistral, Phi-3)",
+      "Prompt Engineering",
+      "RAGAS",
+      "ROUGE-L"
+    ],
+    "👁️ Computer Vision": [
+      "YOLOv7",
+      "OpenCV",
+      "Albumentations",
+      "Optuna (hyperparameter search)",
+      "Transfer Learning",
+      "Test-Time Augmentation"
+    ],
+    "📊 Data Visualization & BI": [
       "Power BI",
       "Tableau",
       "Matplotlib",
       "Seaborn",
       "Dash",
-      "Plotly"
+      "Plotly",
+      "Amazon QuickSight"
     ],
-    "🌐 Web, API & App Development": [
+    "🌐 Web & API Development": [
       "Django",
       "Flask",
       "React.js",
       "RESTful APIs",
       "Postman",
       "JWT",
-      "HTML/CSS/JS Basics",
-      "Figma"
+      "HTML/CSS/JS"
     ],
-    "☁️ DevOps, Cloud & Deployment": [
-      "AWS (S3, Lambda, Translator)",
+    "☁️ Cloud & Data Engineering": [
+      "AWS (S3, Lambda, EC2, Glue, Athena, QuickSight, Mage.ai)",
+      "Azure (Data Lake Gen2, Databricks, Data Factory, Synapse, Delta Lake, Azure SQL)",
+      "Medallion Architecture (Bronze/Silver/Gold)",
+      "Parquet",
       "Git",
       "GitHub",
       "Docker",
-      "CI/CD (Basics)"
+      "CI/CD"
     ],
   };
 
@@ -118,23 +144,37 @@ const About = () => {
           <div className="text-[#ABB2BF] space-y-4">
             <p className="relative pl-6">
               <span className="absolute left-0 top-2 w-2 h-2 bg-[#C778DD] rounded-full"></span>
-              I&apos;m Jatin Nabhoya — a <span className="text-[#C778DD] font-semibold">Data Science graduate student</span> and <span className="text-[#C778DD] font-semibold">Machine Learning engineer</span> who believes data only becomes powerful when it drives real decisions.
+              I&apos;m Jatin Nabhoya, a <span className="text-[#C778DD] font-semibold">Data Science graduate student</span> and multidisciplinary <span className="text-[#C778DD] font-semibold">ML/AI practitioner</span> who believes data and models only matter when they drive real, measurable decisions.
             </p>
             <p className="relative pl-6">
               <span className="absolute left-0 top-2 w-2 h-2 bg-[#C778DD] rounded-full"></span>
-              My journey started in India, where I earned a B.Tech in Computer Engineering from RK University and led my team to become a <strong className="text-[#C778DD]">Smart India Hackathon 2022 Finalist</strong> — building an ML-powered document verification system that improved <span className="text-[#C778DD] font-semibold">fraud detection accuracy by 30%</span>. That experience cemented my belief that the best models are the ones that solve concrete, human problems.
+              My journey started in India, where I earned a B.Tech in Computer Engineering from RK University and led my team to become a <strong className="text-[#C778DD]">Smart India Hackathon 2022 Finalist</strong>,building an ML-powered document verification system that improved <span className="text-[#C778DD] font-semibold">fraud detection accuracy by 30%</span>.
             </p>
             <p className="relative pl-6">
               <span className="absolute left-0 top-2 w-2 h-2 bg-[#C778DD] rounded-full"></span>
-              Today, I&apos;m an MS Data Science student at the University of New Haven, going deeper into the areas I find most exciting — <span className="text-[#C778DD] font-semibold">Natural Language Processing</span> (language models, sequence modeling, text classification) and <span className="text-[#C778DD] font-semibold">Deep Learning</span> (CNNs, RNNs, image classification, transfer learning) — while actively building projects that put these concepts into practice.
+              I&apos;m currently an MS Data Science student at the <span className="text-[#C778DD] font-semibold">University of New Haven (GPA 4.00)</span>, going deeper into Natural Language Processing, Deep Learning, and Statistical Inference — while shipping end-to-end projects that span four connected disciplines:
             </p>
+            <ul className="pl-6 space-y-3">
+              <li className="relative pl-6">
+                <span className="absolute left-0 top-2 w-2 h-2 bg-[#C778DD] rounded-full"></span>
+                <span className="text-[#C778DD] font-semibold">Data Science &amp; Analytics</span> — building predictive models and BI-driven storytelling, from Netflix content-trend forecasting to a 7-category hallucination-taxonomy audit of clinical NLP systems.
+              </li>
+              <li className="relative pl-6">
+                <span className="absolute left-0 top-2 w-2 h-2 bg-[#C778DD] rounded-full"></span>
+                <span className="text-[#C778DD] font-semibold">AI / ML Engineering</span> — fine-tuning and evaluating LLMs (Llama-3, Mistral, Phi-3) for retrieval-augmented generation on medical corpora, and training computer-vision models (YOLOv7) with Optuna hyperparameter search and test-time augmentation.
+              </li>
+              <li className="relative pl-6">
+                <span className="absolute left-0 top-2 w-2 h-2 bg-[#C778DD] rounded-full"></span>
+                <span className="text-[#C778DD] font-semibold">Data Engineering</span> — designing medallion-architecture pipelines (Raw/Bronze → Silver → Gold) on both <span className="font-semibold">AWS</span> (S3, EC2, Glue, Athena, Mage.ai, QuickSight) and <span className="font-semibold">Azure</span> (Data Factory, Databricks/PySpark, Delta Lake, Synapse) to move raw data into analytics-ready gold layers at scale.
+              </li>
+              <li className="relative pl-6">
+                <span className="absolute left-0 top-2 w-2 h-2 bg-[#C778DD] rounded-full"></span>
+                <span className="text-[#C778DD] font-semibold">Full-Stack Applied ML</span> — shipping production systems end-to-end (Django, React.js, MySQL, AWS Lambda, OCR + NLP pipelines) that solve real institutional problems, like automated document verification for scholarships.
+              </li>
+            </ul>
             <p className="relative pl-6">
               <span className="absolute left-0 top-2 w-2 h-2 bg-[#C778DD] rounded-full"></span>
-              Beyond the classroom, I&apos;ve architected end-to-end solutions: a <span className="text-[#C778DD] font-semibold">cloud-scale ride analytics pipeline on AWS</span> using Apache Airflow, Redshift, and Power BI; a <span className="text-[#C778DD] font-semibold">diabetes risk prediction system</span> comparing multiple classifiers with full feature engineering; and a full-stack e-commerce portal built with Django REST and React.js. I&apos;m equally comfortable designing ETL pipelines, fine-tuning classifiers with Scikit-Learn, or experimenting with neural networks in <span className="text-[#C778DD] font-semibold">PyTorch and TensorFlow</span>.
-            </p>
-            <p className="relative pl-6">
-              <span className="absolute left-0 top-2 w-2 h-2 bg-[#C778DD] rounded-full"></span>
-              I bring a blend of <span className="text-[#C778DD] font-semibold">statistical rigor, software engineering, and a user-first mindset</span> to every project. Whether I&apos;m optimizing a model, automating a cloud workflow, or exploring a new architecture, my goal stays the same: <strong className="text-[#C778DD]">build intelligent, scalable systems that don&apos;t just learn — they lead.</strong>
+              I bring a blend of <span className="text-[#C778DD] font-semibold">statistical rigor, cloud/software engineering, and a user-first mindset</span> to every project. Goal: <strong className="text-[#C778DD]">build intelligent, scalable systems that don&apos;t just learn,they lead.</strong>
             </p>
           </div>
         </div>
