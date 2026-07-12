@@ -90,6 +90,63 @@ ProjectCard.propTypes = {
 const Projects = () => {
   const projects = [
     {
+      title: "Clinical RAG Hallucination Audit — Comparing how open-source LLMs hallucinate in a medical retrieval-augmented generation pipeline",
+      duration: "march-2026",
+      tech: [
+        "Python",
+        "RAG",
+        "LangChain",
+        "Hugging Face Transformers",
+        "FAISS",
+        "PubMedBERT",
+        "Sentence-Transformers",
+        "4-bit Quantization (BitsAndBytes)",
+        "RAGAS",
+        "ROUGE-L",
+        "NCBI E-utilities",
+        "Llama-3",
+        "Mistral",
+        "Phi-3"
+      ],
+      description: [
+        "Built a fully reproducible two-environment RAG pipeline: collected 110 open-access medical documents from PubMed Central, CDC, WHO, and MedlinePlus across 7 domains, then cleaned and chunked them into 2,753 production-ready chunks (512-token windows, tiktoken-accurate, LaTeX/micro-chunk filtering, domain rebalancing from a 57:1 skew).",
+        "Embedded chunks with S-PubMedBERT-MS-MARCO (768-d) plus a general-purpose baseline for ablation, indexed in FAISS with exact cosine similarity. Ran Llama-3-8B, Mistral-7B, and Phi-3-mini through an identical strictly-grounded RAG pipeline under matched 4-bit NF4 quantization and greedy decoding to eliminate confounders.",
+        "Hand-built a 110-question benchmark across four tiers (answerable / partial / ambiguous / unanswerable), calibrated against measured retrieval coverage so each question probes a specific failure mode. Scored with a rule-based 7-category hallucination taxonomy — no LLM judge, fully reproducible — plus ROUGE-L, a context-overlap faithfulness proxy, and bootstrap 95% CIs.",
+        "Key finding: over-refusal dominated every model (35–55%) while fabrication stayed ≤1.8%. Safety-tuned open-source LLMs err toward excessive caution — a utility failure, not a safety one.",
+        "Mistral-7B was the most clinically reliable at 52.7% overall correctness — best calibration, refusing 27/29 unanswerable questions while still engaging with 22/30 answerable ones.",
+        "Phi-3-mini answers from memory, not evidence: its context-overlap score (0.199) was ~3× lower than peers, meaning it uses retrieved context as a topic hint rather than a grounding source.",
+        "Root-cause analysis traced Llama-3's over-refusals to retriever mismatch, not the model itself. Results written up as a conference-style paper: 'Auditing Hallucination in Clinical RAG: A Comparative Study of Three Open-Source LLMs' — Jatin Nabhoya & Mohit Raiyani, University of New Haven."
+      ],
+      image: "/images/clinical-rag-cover.svg",
+      sourceCode: "https://github.com/Jatin-nabhoya/clinical-rag-audit",
+      liveDemo: "https://github.com/Jatin-nabhoya/clinical-rag-audit/blob/main/docs/clinical_rag_paper.md"
+    },
+    {
+      title: "Gym Equipment Detection with YOLOv7 — Fine-tuning a real-time object detector on a custom dataset",
+      duration: "may-2026",
+      tech: [
+        "Python",
+        "PyTorch",
+        "YOLOv7",
+        "Object Detection",
+        "Transfer Learning",
+        "Optuna",
+        "Albumentations",
+        "OpenCV",
+        "torchmetrics",
+        "scikit-learn"
+      ],
+      description: [
+        "Built an end-to-end detection pipeline on a self-collected 203-image dataset across five gym equipment classes (dumbbell, barbell, kettlebell, resistance band, pull-up bar), split 162/20/21 train/val/test with augmentation (flips, color jitter, mosaic).",
+        "Established a domain-gap baseline using COCO-pretrained YOLOv7 with no fine-tuning (0.0005 mAP@0.5 — effectively blind), then lifted performance to ~0.45 mAP@0.5 through a two-phase staged strategy: freeze backbone + warm up detection head first, then unfreeze all layers for full end-to-end fine-tuning (50 epochs, early stopping at patience 15).",
+        "Ran a 30-trial Optuna hyperparameter search over learning rate, weight decay, batch size, and augmentation strength, plus test-time augmentation at evaluation — wrote a custom PyTorch training loop instead of the stock YOLOv7 trainer for full control over the freeze/unfreeze schedule.",
+        "Detection performance: COCO baseline 0.0005 → frozen-head fine-tuning ~0.20 → full fine-tuning ~0.45 mAP@0.5. Documented with training curves and a confusion matrix in a full project report (docs/report.pdf in repo)."
+      ],
+      image: "/images/placeholder.svg",
+      sourceCode: "https://github.com/Jatin-nabhoya/YOLOv7_Gym_Equipment_Detection",
+      liveDemo: "https://github.com/Jatin-nabhoya/YOLOv7_Gym_Equipment_Detection/blob/main/docs/report.pdf"
+    },
+    {
       title: "RidePulse | AWS-Based Data Engineering Pipeline (Medallion Architecture)",
       duration: "sep-2025",
       tech: [

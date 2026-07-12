@@ -1,0 +1,166 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A0E14"/>
+      <stop offset="0.55" stop-color="#0C121C"/>
+      <stop offset="1" stop-color="#0E1622"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2DD4BF"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.78" cy="0.28" r="0.6">
+      <stop offset="0" stop-color="#0E7490" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#0E7490" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- faint grid -->
+  <g stroke="#1A2433" stroke-width="1" opacity="0.5">
+    <line x1="0" y1="150" x2="1600" y2="150"/>
+    <line x1="0" y1="300" x2="1600" y2="300"/>
+    <line x1="0" y1="450" x2="1600" y2="450"/>
+    <line x1="0" y1="600" x2="1600" y2="600"/>
+    <line x1="0" y1="750" x2="1600" y2="750"/>
+    <line x1="200" y1="0" x2="200" y2="900"/>
+    <line x1="400" y1="0" x2="400" y2="900"/>
+    <line x1="600" y1="0" x2="600" y2="900"/>
+    <line x1="800" y1="0" x2="800" y2="900"/>
+    <line x1="1000" y1="0" x2="1000" y2="900"/>
+    <line x1="1200" y1="0" x2="1200" y2="900"/>
+    <line x1="1400" y1="0" x2="1400" y2="900"/>
+  </g>
+
+  <!-- border frame -->
+  <rect x="28" y="28" width="1544" height="844" rx="20" fill="none" stroke="#1F2A38" stroke-width="2"/>
+
+  <!-- eyebrow -->
+  <g font-family="'SF Mono','Consolas',monospace">
+    <rect x="92" y="92" width="14" height="14" rx="3" fill="url(#teal)"/>
+    <text x="120" y="104" font-size="20" letter-spacing="5" fill="#5EEAD4">RESEARCH · NLP · LLM EVALUATION</text>
+  </g>
+
+  <!-- title -->
+  <text x="90" y="236" font-size="74" font-weight="700" fill="#F1F5F9" letter-spacing="-1">Clinical RAG</text>
+  <text x="90" y="320" font-size="74" font-weight="700" letter-spacing="-1" fill="url(#teal)">Hallucination Audit</text>
+
+  <!-- subtitle -->
+  <text x="92" y="386" font-size="27" fill="#8FA3B8" font-weight="400">Comparing hallucination behavior across three</text>
+  <text x="92" y="424" font-size="27" fill="#8FA3B8" font-weight="400">open-source LLMs in a clinical RAG pipeline</text>
+
+  <!-- model chips -->
+  <g font-size="24" font-weight="600">
+    <rect x="92" y="500" width="206" height="58" rx="29" fill="#111C28" stroke="#2DD4BF" stroke-opacity="0.5" stroke-width="1.5"/>
+    <circle cx="128" cy="529" r="7" fill="#2DD4BF"/>
+    <text x="148" y="537" fill="#D7E3EE">Llama-3-8B</text>
+
+    <rect x="318" y="500" width="206" height="58" rx="29" fill="#111C28" stroke="#38BDF8" stroke-opacity="0.5" stroke-width="1.5"/>
+    <circle cx="354" cy="529" r="7" fill="#38BDF8"/>
+    <text x="374" y="537" fill="#D7E3EE">Mistral-7B</text>
+
+    <rect x="544" y="500" width="200" height="58" rx="29" fill="#111C28" stroke="#818CF8" stroke-opacity="0.5" stroke-width="1.5"/>
+    <circle cx="580" cy="529" r="7" fill="#818CF8"/>
+    <text x="600" y="537" fill="#D7E3EE">Phi-3-mini</text>
+  </g>
+
+  <!-- Right side pipeline illustration -->
+  <g transform="translate(1018,150)">
+    <rect x="0" y="0" width="490" height="600" rx="22" fill="#0B1320" stroke="#1E2A3A" stroke-width="2"/>
+    <text x="34" y="56" font-size="22" font-weight="600" fill="#5EEAD4" font-family="'SF Mono','Consolas',monospace" letter-spacing="2">RAG PIPELINE</text>
+
+    <!-- node: documents -->
+    <g transform="translate(60,96)">
+      <rect x="0" y="0" width="120" height="84" rx="14" fill="#111E2C" stroke="#2DD4BF" stroke-width="2"/>
+      <rect x="34" y="20" width="40" height="50" rx="4" fill="none" stroke="#2DD4BF" stroke-width="2.5"/>
+      <rect x="44" y="14" width="40" height="50" rx="4" fill="#111E2C" stroke="#2DD4BF" stroke-width="2.5"/>
+      <line x1="52" y1="28" x2="76" y2="28" stroke="#2DD4BF" stroke-width="2"/>
+      <line x1="52" y1="38" x2="76" y2="38" stroke="#2DD4BF" stroke-width="2"/>
+      <line x1="52" y1="48" x2="68" y2="48" stroke="#2DD4BF" stroke-width="2"/>
+    </g>
+    <text x="120" y="210" font-size="16" fill="#A9BACC" text-anchor="middle" font-weight="600">110 docs · 2.7k chunks</text>
+
+    <line x1="120" y1="230" x2="120" y2="266" stroke="#33485E" stroke-width="2.5" stroke-dasharray="4 5"/>
+    <polygon points="120,272 114,262 126,262" fill="#33485E"/>
+
+    <!-- node: FAISS / embeddings -->
+    <g transform="translate(300,96)">
+      <rect x="0" y="0" width="120" height="84" rx="14" fill="#101D2B" stroke="#38BDF8" stroke-width="2"/>
+      <g stroke="#38BDF8" stroke-width="2.5" fill="none">
+        <circle cx="36" cy="30" r="6"/><circle cx="84" cy="26" r="6"/>
+        <circle cx="30" cy="58" r="6"/><circle cx="74" cy="58" r="6"/>
+        <line x1="42" y1="30" x2="78" y2="26"/>
+        <line x1="36" y1="36" x2="32" y2="52"/>
+        <line x1="80" y1="32" x2="74" y2="52"/>
+        <line x1="36" y1="58" x2="68" y2="58"/>
+      </g>
+    </g>
+    <text x="360" y="210" font-size="16" fill="#A9BACC" text-anchor="middle" font-weight="600">PubMedBERT + FAISS</text>
+
+    <line x1="360" y1="232" x2="360" y2="266" stroke="#33485E" stroke-width="2.5" stroke-dasharray="4 5"/>
+    <polygon points="360,272 354,262 366,262" fill="#33485E"/>
+
+    <!-- 3 LLM nodes row -->
+    <g transform="translate(60,290)">
+      <rect x="0" y="0" width="370" height="92" rx="14" fill="#0F1A27" stroke="#2A3A4D" stroke-width="2"/>
+      <text x="185" y="-12" font-size="18" fill="#7C8DA3" text-anchor="middle" font-family="'SF Mono','Consolas',monospace" letter-spacing="1">3 x LLM GENERATOR</text>
+      <g text-anchor="middle" font-size="17" font-weight="600">
+        <rect x="22" y="24" width="100" height="44" rx="10" fill="#0B1320" stroke="#2DD4BF" stroke-width="1.5"/>
+        <text x="72" y="51" fill="#CFE0EE">Llama-3</text>
+        <rect x="135" y="24" width="100" height="44" rx="10" fill="#0B1320" stroke="#38BDF8" stroke-width="1.5"/>
+        <text x="185" y="51" fill="#CFE0EE">Mistral</text>
+        <rect x="248" y="24" width="100" height="44" rx="10" fill="#0B1320" stroke="#818CF8" stroke-width="1.5"/>
+        <text x="298" y="51" fill="#CFE0EE">Phi-3</text>
+      </g>
+    </g>
+
+    <line x1="245" y1="396" x2="245" y2="430" stroke="#33485E" stroke-width="2.5" stroke-dasharray="4 5"/>
+    <polygon points="245,436 239,426 251,426" fill="#33485E"/>
+
+    <!-- audit node -->
+    <g transform="translate(60,452)">
+      <rect x="0" y="0" width="370" height="100" rx="14" fill="#15110A" stroke="#F5A524" stroke-width="2"/>
+      <g transform="translate(34,26)" stroke="#F5A524" stroke-width="3" fill="none">
+        <circle cx="22" cy="22" r="18"/>
+        <line x1="35" y1="35" x2="48" y2="48"/>
+      </g>
+      <text x="110" y="44" font-size="22" font-weight="700" fill="#F5A524">7-category</text>
+      <text x="110" y="74" font-size="22" font-weight="700" fill="#F5A524">hallucination taxonomy</text>
+    </g>
+  </g>
+
+  <!-- Bottom-left key result -->
+  <g transform="translate(92,612)">
+    <text x="0" y="0" font-size="20" fill="#7C8DA3" font-family="'SF Mono','Consolas',monospace" letter-spacing="2">KEY FINDING</text>
+    <text x="0" y="46" font-size="34" font-weight="700" fill="#F1F5F9">Over-refusal dominates <tspan fill="#F5A524">(35-55%)</tspan></text>
+    <text x="0" y="86" font-size="34" font-weight="700" fill="#F1F5F9">not fabrication <tspan fill="#2DD4BF">(1.8%)</tspan></text>
+
+    <!-- mini bar comparison -->
+    <g transform="translate(0,118)">
+      <rect x="0" y="0" width="430" height="18" rx="9" fill="#16202D"/>
+      <rect x="0" y="0" width="300" height="18" rx="9" fill="#F5A524"/>
+      <rect x="0" y="0" width="20" height="18" rx="9" fill="#2DD4BF"/>
+      <text x="0" y="46" font-size="17" fill="#8FA3B8">Over-refusal            vs          Fabrication</text>
+    </g>
+  </g>
+
+  <!-- footer -->
+  <g transform="translate(92,824)">
+    <line x1="0" y1="-26" x2="900" y2="-26" stroke="#1F2A38" stroke-width="1.5"/>
+    <text x="0" y="6" font-size="22" fill="#AEBED0" font-weight="600">Jatin Nabhoya · Mohit Raiyani</text>
+    <text x="430" y="6" font-size="22" fill="#5E7285">University of New Haven</text>
+    <g transform="translate(900,-15)" stroke="#5EEAD4" stroke-width="2" fill="none">
+      <rect x="0" y="0" width="17" height="21" rx="2.5"/>
+      <line x1="4" y1="6" x2="13" y2="6"/>
+      <line x1="4" y1="10.5" x2="13" y2="10.5"/>
+      <line x1="4" y1="15" x2="10" y2="15"/>
+    </g>
+    <text x="930" y="6" font-size="22" fill="#5EEAD4" font-family="'SF Mono','Consolas',monospace" text-anchor="start">Research Paper</text>
+  </g>
+</svg>
