@@ -12,7 +12,7 @@ const ProjectCard = ({ title, description, tech, duration, image, sourceCode, li
           <img 
             src={image} 
             alt={title}
-            className="w-full h-full group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
           />
         </div>
 
@@ -79,7 +79,7 @@ const ProjectCard = ({ title, description, tech, duration, image, sourceCode, li
 
 ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.arrayOf(PropTypes.string).isRequired,
+  description: PropTypes.arrayOf(PropTypes.node).isRequired,
   tech: PropTypes.arrayOf(PropTypes.string).isRequired,
   duration: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
@@ -89,6 +89,36 @@ ProjectCard.propTypes = {
 
 const Projects = () => {
   const projects = [
+    {
+      title: "Keshav Cup: Tournament Management Platform — Constraint-optimized scheduling and real-time analytics",
+      duration: "oct-2026",
+      tech: [
+        "Python",
+        "Django REST Framework",
+        "PostgreSQL",
+        "Celery",
+        "Redis",
+        "React",
+        "TypeScript",
+        "SSE",
+        "Anthropic API"
+      ],
+      description: [
+        "Keshav Cup automates the whole tournament lifecycle, from round-robin scheduling to seeded double-elimination brackets.",
+        "The core problem is combinatorial: hundreds of matches across limited courts, under hard constraints on court affinity, team rest gaps, and referee workload fairness. I built a 14-rule constraint engine for referee allocation. When I audited it on real tournament data, the greedy allocator was leaving most referee slots unfilled. I fixed it with fair-share capacity caps, eligibility-weighted prioritization, and a rebalancing pass, then validated the fix across 6-, 7-, and 8-court scenarios.",
+        "A separate analytics pipeline turns match-level behavior into a 0–100 reliability score with Green/Amber/Red tiers, which feeds reliability-weighted assignment.",
+        "For the system design, I used SSE streaming with a server-authoritative clock to keep displays in sync, a maker-checker state machine with Celery workers to validate scores, and feature flags to roll out experimental rules safely.",
+        <strong key="key-highlights" className="text-white">Key highlights:</strong>,
+        "Optimization: resolved allocation starvation in a greedy constraint solver.",
+        "Analytics: built a reliability scoring model with tiered classification and ranking dashboards.",
+        "Ranking: multi-key seeding with a head-to-head tiebreaker and normalization for uneven group sizes.",
+        "Systems: real-time streaming, race-condition-safe sync, and async task queues.",
+        "Applied AI: an LLM-driven development and documentation pipeline."
+      ],
+      image: "/images/keshav-cup.png",
+      sourceCode: "https://github.com/jshah85/tournament-management-system",
+      liveDemo: "https://tournament-management-system-beta.vercel.app/"
+    },
     {
       title: "Clinical RAG Hallucination Audit — Comparing how open-source LLMs hallucinate in a medical retrieval-augmented generation pipeline",
       duration: "march-2026",
