@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const ProjectCard = ({ title, description, tech, duration, image, sourceCode, liveDemo }) => {
+const ProjectCard = ({ title, description, tech, duration, image, sourceCode, liveDemo, paper }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -49,7 +49,7 @@ const ProjectCard = ({ title, description, tech, duration, image, sourceCode, li
           </div>
 
           {/* Project Links */}
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
             {liveDemo && (
               <a
                 href={liveDemo}
@@ -70,6 +70,16 @@ const ProjectCard = ({ title, description, tech, duration, image, sourceCode, li
                 Source Code <span className="ml-1">{'</>'}</span>
               </a>
             )}
+            {paper && (
+              <a
+                href={paper}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-[#C778DD] px-4 py-2 hover:bg-[#C778DD] hover:text-white transition-colors"
+              >
+                Read Paper <span className="ml-1">{'[pdf]'}</span>
+              </a>
+            )}
           </div>
         </div>
       </div>
@@ -84,7 +94,8 @@ ProjectCard.propTypes = {
   duration: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   sourceCode: PropTypes.string,
-  liveDemo: PropTypes.string
+  liveDemo: PropTypes.string,
+  paper: PropTypes.string
 };
 
 const Projects = () => {
@@ -108,7 +119,9 @@ const Projects = () => {
         "Designed SG-RQF, a retrieval-augmented Q-Former, and benchmarked it against all baselines on BLEU-4, METEOR, ROUGE-L, and CIDEr.",
         "Confirmed that score differences between models were statistically significant using paired bootstrap and permutation tests."
       ],
-      image: "/images/video-captioning-cover.svg"
+      image: "/images/video-captioning-cover.svg",
+      sourceCode: "https://github.com/Jatin-nabhoya/Video_Caption_Generation",
+      paper: "https://github.com/Jatin-nabhoya/Video_Caption_Generation/blob/main/docs/Improving_Video_Captioning_with_Vision-Language_Models.pdf"
     },
     {
       title: "Keshav Cup: Tournament Management Platform — Constraint-optimized scheduling and real-time analytics",
