@@ -141,10 +141,11 @@ const Projects = () => {
       liveDemo: "https://tournament-management-system-beta.vercel.app/"
     },
     {
-      title: "Clinical RAG Hallucination Audit — Comparing how open-source LLMs hallucinate in a medical retrieval-augmented generation pipeline",
+      title: "Clinical AI Agent for RAG Hallucination Auditing — Multi-LLM hallucination detection on medical retrieval-augmented generation",
       duration: "march-2026",
       tech: [
         "Python",
+        "AI Agents",
         "RAG",
         "LangChain",
         "Hugging Face Transformers",
@@ -152,17 +153,19 @@ const Projects = () => {
         "PubMedBERT",
         "Sentence-Transformers",
         "4-bit Quantization (BitsAndBytes)",
+        "Ollama",
         "RAGAS",
         "ROUGE-L",
-        "NCBI E-utilities",
         "Llama-3",
         "Mistral",
-        "Phi-3"
+        "Phi-3",
+        "Docker"
       ],
       description: [
-        "Built a fully reproducible two-environment RAG pipeline: collected 110 open-access medical documents from PubMed Central, CDC, WHO, and MedlinePlus across 7 domains, then cleaned and chunked them into 2,753 production-ready chunks (512-token windows, tiktoken-accurate, LaTeX/micro-chunk filtering, domain rebalancing from a 57:1 skew).",
-        "Embedded chunks with S-PubMedBERT-MS-MARCO (768-d) plus a general-purpose baseline for ablation, indexed in FAISS with exact cosine similarity. Ran Llama-3-8B, Mistral-7B, and Phi-3-mini through an identical strictly-grounded RAG pipeline under matched 4-bit NF4 quantization and greedy decoding to eliminate confounders.",
-        "Hand-built a 110-question benchmark across four tiers (answerable / partial / ambiguous / unanswerable), calibrated against measured retrieval coverage so each question probes a specific failure mode. Scored with a rule-based 7-category hallucination taxonomy — no LLM judge, fully reproducible — plus ROUGE-L, a context-overlap faithfulness proxy, and bootstrap 95% CIs.",
+        "Built an end-to-end AI agent that autonomously retrieves biomedical documents (PubMed Central, FDA drug labels, CDC, WHO, MedlinePlus), routes tiered queries through three open-source LLMs (Llama-3-8B, Mistral-7B, Phi-3-mini), evaluates their responses, and generates structured audit reports with no manual intervention per run.",
+        "Retrieval layer: 110 open-access medical documents across 7 domains, cleaned and chunked into 2,753 chunks (512-token windows, domain rebalancing from a 57:1 skew), embedded with S-PubMedBERT-MS-MARCO plus a general-purpose baseline for ablation, and indexed in FAISS with exact cosine similarity.",
+        "All three models run through an identical, strictly grounded RAG pipeline under matched 4-bit NF4 quantization and greedy decoding to eliminate confounders; the agent is containerized with Docker as modular retrieval, inference, and evaluation stages.",
+        "Hand-built a 110-question benchmark across answerable / partial / ambiguous / unanswerable tiers, scored with a hallucination taxonomy (fabrication, factual drift, omission, confident uncertainty, over-refusal, and more), RAGAS faithfulness and context use with and without retrieval, ROUGE-L, and bootstrap 95% CIs.",
         "Key finding: over-refusal dominated every model (35–55%) while fabrication stayed ≤1.8%. Safety-tuned open-source LLMs err toward excessive caution — a utility failure, not a safety one.",
         "Mistral-7B was the most clinically reliable at 52.7% overall correctness — best calibration, refusing 27/29 unanswerable questions while still engaging with 22/30 answerable ones.",
         "Phi-3-mini answers from memory, not evidence: its context-overlap score (0.199) was ~3× lower than peers, meaning it uses retrieved context as a topic hint rather than a grounding source.",
@@ -171,28 +174,6 @@ const Projects = () => {
       image: "/images/clinical-rag-cover.svg",
       sourceCode: "https://github.com/Jatin-nabhoya/clinical-rag-audit",
       liveDemo: "https://github.com/Jatin-nabhoya/clinical-rag-audit/blob/main/docs/clinical_rag_paper.md"
-    },
-    {
-      title: "Clinical AI Agent — Multi-LLM Hallucination Detection System (in development)",
-      duration: "feb-2026",
-      tech: [
-        "Python",
-        "AI Agents",
-        "RAG",
-        "LLM Orchestration",
-        "RAGAS",
-        "Ollama",
-        "Llama-3",
-        "Mistral",
-        "Phi-3",
-        "Docker"
-      ],
-      description: [
-        "Built an end-to-end AI agent that autonomously retrieves biomedical documents (FDA drug labels and PubMed abstracts), routes 10-tier queries through three LLMs, evaluates responses, and generates structured audit reports with no manual intervention per run.",
-        "Designed a hallucination taxonomy covering fabrication, factual drift, omission, and confident uncertainty, then automated RAGAS-based LLM evaluation and results documentation to support systematic validation across model versions.",
-        "Containerized the agent with Docker as modular retrieval, inference, and evaluation stages; scored faithfulness and context use with and without retrieval to guide model selection for deployment."
-      ],
-      image: "/images/clinical-agent-cover.svg"
     },
     {
       title: "Gym Equipment Detection with YOLOv7 — Fine-tuning a real-time object detector on a custom dataset",
