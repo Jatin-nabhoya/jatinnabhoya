@@ -90,6 +90,27 @@ ProjectCard.propTypes = {
 const Projects = () => {
   const projects = [
     {
+      title: "Video Captioning with Vision-Language Models — Retrieval-Augmented Q-Former (SG-RQF)",
+      duration: "nov-2026",
+      tech: [
+        "Python",
+        "PyTorch",
+        "Hugging Face Transformers",
+        "PEFT/QLoRA",
+        "CLIP4Clip",
+        "GIT",
+        "BLIP-2",
+        "Qwen2.5-VL"
+      ],
+      description: [
+        "Fine-tuned and benchmarked 4 vision-language models (CLIP4Clip, GIT, BLIP-2, Qwen2.5-VL) for video captioning on the MSVD, MSR-VTT, and VATEX datasets.",
+        "Used QLoRA 4-bit fine-tuning to train the 3B-parameter Qwen2.5-VL on a single 16 GB T4 GPU under tight compute limits.",
+        "Designed SG-RQF, a retrieval-augmented Q-Former, and benchmarked it against all baselines on BLEU-4, METEOR, ROUGE-L, and CIDEr.",
+        "Confirmed that score differences between models were statistically significant using paired bootstrap and permutation tests."
+      ],
+      image: "/images/video-captioning-cover.svg"
+    },
+    {
       title: "Keshav Cup: Tournament Management Platform — Constraint-optimized scheduling and real-time analytics",
       duration: "oct-2026",
       tech: [
@@ -152,6 +173,28 @@ const Projects = () => {
       liveDemo: "https://github.com/Jatin-nabhoya/clinical-rag-audit/blob/main/docs/clinical_rag_paper.md"
     },
     {
+      title: "Clinical AI Agent — Multi-LLM Hallucination Detection System (in development)",
+      duration: "feb-2026",
+      tech: [
+        "Python",
+        "AI Agents",
+        "RAG",
+        "LLM Orchestration",
+        "RAGAS",
+        "Ollama",
+        "Llama-3",
+        "Mistral",
+        "Phi-3",
+        "Docker"
+      ],
+      description: [
+        "Built an end-to-end AI agent that autonomously retrieves biomedical documents (FDA drug labels and PubMed abstracts), routes 10-tier queries through three LLMs, evaluates responses, and generates structured audit reports with no manual intervention per run.",
+        "Designed a hallucination taxonomy covering fabrication, factual drift, omission, and confident uncertainty, then automated RAGAS-based LLM evaluation and results documentation to support systematic validation across model versions.",
+        "Containerized the agent with Docker as modular retrieval, inference, and evaluation stages; scored faithfulness and context use with and without retrieval to guide model selection for deployment."
+      ],
+      image: "/images/clinical-agent-cover.svg"
+    },
+    {
       title: "Gym Equipment Detection with YOLOv7 — Fine-tuning a real-time object detector on a custom dataset",
       duration: "may-2026",
       tech: [
@@ -183,6 +226,7 @@ const Projects = () => {
         "AWS S3",
         "AWS EC2",
         "Mage.ai",
+        "Apache Airflow",
         "AWS Glue (Crawler & Jobs)",
         "AWS Athena (CTAS)",
         "Amazon QuickSight",
@@ -193,7 +237,9 @@ const Projects = () => {
       description: [
         "RidePulse is an AWS-native data engineering project that implements a three-layer medallion architecture (Raw, Silver, Gold) to transform real-world NYC TLC open-source CSV data into analytics-ready, high-quality datasets. The pipeline is designed to handle unstructured and semi-structured raw data, enforce schema consistency, and optimize data storage for analytical workloads.",
         "The ingestion layer stores raw NYC TLC CSV files in Amazon S3 (Raw layer). ETL orchestration is handled using Mage.ai deployed on AWS EC2, enabling modular, version-controlled pipelines. Schema discovery and validation are performed using AWS Glue Crawlers, followed by AWS Glue Jobs to transform data from CSV to columnar Parquet format, writing cleaned and standardized datasets to the Silver layer in S3.",
-        "In the Gold layer, curated and aggregated datasets are modeled for analytics using Athena external tables and CTAS queries, enabling efficient querying and downstream consumption. The optimized datasets are visualized using Amazon QuickSight and Power BI, supporting exploratory data analysis and dashboard-driven insights. The project emphasizes data quality checks, schema evolution handling, storage optimization, and scalable ETL design, closely simulating production-grade data engineering systems."
+        "In the Gold layer, curated and aggregated datasets are modeled for analytics using Athena external tables and CTAS queries, enabling efficient querying and downstream consumption. The optimized datasets are visualized using Amazon QuickSight and Power BI, supporting exploratory data analysis and dashboard-driven insights. The project emphasizes data quality checks, schema evolution handling, storage optimization, and scalable ETL design, closely simulating production-grade data engineering systems.",
+        "Automated the ETL stages with Airflow DAGs and AWS Glue jobs, using scheduled triggers, dependency management, and failure alerting so data moves bronze → silver → gold with zero manual handoffs, following CI/CD principles for data workflows.",
+        "Delivered Power BI dashboards reporting pipeline throughput, demand behavior, and system performance for stakeholders."
       ],
       image: "/images/ridepulse.jpeg",
       sourceCode: "#",

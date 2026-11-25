@@ -60,14 +60,18 @@ const About = () => {
       "Probability",
       "Statistics",
       "Optimization",
-      "Calculus"
+      "Calculus",
+      "Statistical Analysis",
+      "Hypothesis Testing (Bootstrap, Permutation)",
+      "Data Validation"
     ],
     "🧑‍💻 Programming & Databases": [
       "Python",
       "SQL",
       "PostgreSQL",
       "MySQL",
-      "MongoDB"
+      "MongoDB",
+      "R"
     ],
     "🤖 Machine Learning & Deep Learning": [
       "Pandas",
@@ -78,7 +82,9 @@ const About = () => {
       "TensorFlow",
       "PySpark",
       "torchmetrics",
-      "MLOps Basics"
+      "MLOps Basics",
+      "Fine-tuning (PEFT / QLoRA)",
+      "Model Evaluation & Benchmarking"
     ],
     "🗣️ NLP & LLM Engineering": [
       "LangChain",
@@ -91,7 +97,10 @@ const About = () => {
       "LLMs (Llama-3, Mistral, Phi-3)",
       "Prompt Engineering",
       "RAGAS",
-      "ROUGE-L"
+      "ROUGE-L",
+      "AI Agents",
+      "LLM Orchestration",
+      "Ollama"
     ],
     "👁️ Computer Vision": [
       "YOLOv7",
@@ -99,7 +108,8 @@ const About = () => {
       "Albumentations",
       "Optuna (hyperparameter search)",
       "Transfer Learning",
-      "Test-Time Augmentation"
+      "Test-Time Augmentation",
+      "Vision-Language Models (CLIP4Clip, GIT, BLIP-2, Qwen2.5-VL)"
     ],
     "📊 Data Visualization & BI": [
       "Power BI",
@@ -108,7 +118,8 @@ const About = () => {
       "Seaborn",
       "Dash",
       "Plotly",
-      "Amazon QuickSight"
+      "Amazon QuickSight",
+      "Dashboard Reporting"
     ],
     "🌐 Web & API Development": [
       "Django",
@@ -120,14 +131,19 @@ const About = () => {
       "HTML/CSS/JS"
     ],
     "☁️ Cloud & Data Engineering": [
-      "AWS (S3, Lambda, EC2, Glue, Athena, QuickSight, Mage.ai)",
+      "AWS (S3, Lambda, EC2, SageMaker, Glue, Redshift, Athena, QuickSight, Mage.ai)",
       "Azure (Data Lake Gen2, Databricks, Data Factory, Synapse, Delta Lake, Azure SQL)",
       "Medallion Architecture (Bronze/Silver/Gold)",
+      "Apache Airflow",
+      "ETL Pipelines",
+      "Data Warehousing",
       "Parquet",
       "Git",
       "GitHub",
       "Docker",
-      "CI/CD"
+      "CI/CD",
+      "GitHub Actions",
+      "Agile/Scrum"
     ],
   };
 
